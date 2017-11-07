@@ -53,6 +53,13 @@ app.get('/about', (req, res) => {
   })
 });
 
+app.get('/portfolio', (req, res) => {
+  res.render('portfolio.hbs', {
+    welcomeTitle: 'Welcome to portfolio page',
+    welcomeMessage: 'Hello, there'
+  })
+});
+
 app.get('/bad', (req, res) => {
   res.send('Error');
 });
