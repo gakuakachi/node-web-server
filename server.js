@@ -20,13 +20,13 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
-  var now = new Date().toString();
-  var log = `${now}: ${req.method} ${req.url}`;
-  res.render('maintenance.hbs', {
-    logData: log
-  })
-})
+// app.use((req, res, next) => {
+//   var now = new Date().toString();
+//   var log = `${now}: ${req.method} ${req.url}`;
+//   res.render('maintenance.hbs', {
+//     logData: log
+//   })
+// })
 
 app.use(express.static(__dirname + '/public'));
 
